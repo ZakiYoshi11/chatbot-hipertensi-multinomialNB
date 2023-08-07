@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+</head>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark nav">
+        <div class="container">
+            <a class="navbar-brand" href="#">Chatbot</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+       <!-- Chatbot Popup Button -->
+    <div class="chatbot-icon" data-toggle="modal" data-target="#chatModal">
+        <i class="fas fa-comment-alt"></i>
+    </div>
+
+     <!-- Chatbot Modal (same as before) -->
+    <div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="chatModalLabel">Tensibot</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="chat-container" id="chatContainer">
+                        <!-- Chat messages will be displayed here -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <form class="d-flex w-100">
+                        <input type="text" class="form-control flex-grow-1" id="question" placeholder="Type your message...">
+                        <button type="button" class="btn ml-2 send" onclick="getAnswer()">
+                            <i class="fa-solid fa-pen-nib" style="color: #ffffff;"></i> <!-- Font Awesome icon for send message -->
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/261b544b74.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+</body>
+</html>

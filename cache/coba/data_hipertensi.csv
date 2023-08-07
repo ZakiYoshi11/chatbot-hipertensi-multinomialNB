@@ -1,0 +1,6 @@
+umur,gender,tekanan_darah,timbunan_lemak,aktivitas_fisik,hipertensi
+45,perempuan,130/80,tinggi,rendah,ya
+55,laki-laki,140/90,sedang,tinggi,ya
+35,perempuan,120/70,normal,tinggi,tidak
+50,laki-laki,150/95,tinggi,rendah,ya
+60,perempuan,160/100,sedang,rendah,ya
